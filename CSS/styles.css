@@ -1,0 +1,1049 @@
+
+/* main page */
+
+/*header
+atentie mare la faptul ca fie link fie clasa care este pe langa lin, acolo unde e cazul, poate avea focus si hover*/
+
+:root {
+    --iris-color: #4d5ae5; 
+    --navyblue-color: #2e2f42;
+    --ocean-color: #404bbf;
+    --slate-color: #434455;
+    --white-color: #ffffff; 
+    --cloud-color: #F4F4FD;
+    --cornflower-color: #e7e9fc;
+    --lightslate-color: #8E8F99; 
+    --green-color: #31d0aa;
+    --dairy-color: #FCFCFC;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--white-color);
+    color: var(--slate-color);
+
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.indexheader {
+    border-bottom: 1px solid var(--cornflower-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
+}
+
+.headerdiv {
+    display: flex;
+}
+/*!!!!!!!fie lui container, fie lui headerdiv. Vom vedea*/
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.indexnavigation {
+    display: flex;
+    align-items: center;
+}
+
+.logoindex {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris-color);
+    margin-right: 76px;
+    /*din instructiunile temei 5. poate e gresit*/
+    /*position: relative;*/
+}
+
+/*atentie, aici ar putea fi simplu link, noi am pus ca sa ne asiguram ca nu sunt probleme mai departe. schimba-l cu simplu link, daca e ok*/
+
+.logolink {
+    text-decoration: none;
+}
+
+.studioindex {
+color: var(--navyblue-color);
+}
+
+.navigationmenu {
+    display: flex;
+    gap: 40px;
+    margin-left: -40px;
+}
+/*Tema 5*/
+
+.navigationmenu .navigationlinks {
+    display: inline-block;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigationmenu .navigationlinks::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%; /* Modificare a width in loc de height */
+    height: 4px;
+    background-color: var(--ocean-color);
+    border-radius: 2px;
+    transform: scaleX(0); /* Adaugat manual, poate nu merge */
+    transform-origin: bottom right; /* Adaugat manual, poate nu merge */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigationmenu .navigationlinks:hover::after {
+    transform: scaleX(1); /* Adaugat de mine, poate nu merge */
+}
+
+.indexaddress .mail {
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} /*sper sa mearga*/
+
+
+/*the list class is shared with section 2*/
+
+.navigationlinks {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--navyblue-color);
+    padding: 24px 0;
+    /*din instructiunile temei 5. poate e gresit*/
+    /*position: relative;*/
+}
+
+.link {
+    text-decoration: none;
+}
+
+.navigationlinks:hover, .navigationlinks:focus {
+color: var(--ocean-color);
+}
+
+.indexaddress {
+    font-style: normal;
+    display: flex;
+    align-items: center;
+}
+
+.indexaddressflex {
+    display: flex;
+    gap: 40px;
+    margin-left: 200px;
+}
+
+.list {
+    list-style: none;
+}
+
+.mail {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate-color);
+}
+
+.mail:hover, .mail:focus {
+    color: var(--ocean-color);
+}
+
+/*first section*/
+
+.firstsection {
+    background-color: var(--navyblue-color);
+    padding: 188px 0; /*poate se confrunta cu .section, unde ai 94 si 94. in caz ca da, sterge!*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/heroimage.jpg);
+}
+
+.firstsectiontitle {
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    max-width: 496px;
+    margin: auto;
+    /*pusa de la mine din burta, poate fi margin: auto;*/
+}
+
+button {
+    background-color: var(--iris-color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white-color);
+}
+/*in caz de nevoie, integreaza datele din button in clasa firstbutton*/
+.firstbutton {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    background-color: var(--iris-color);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 48px;
+    /*pusa de la mine din burta, poate fi margin: auto;*/
+    /*pusa de la mine din burta, poate fi margin-top: 48px;*/
+}
+
+.firstbutton:hover, .firstbutton:focus {
+    background-color: var(--ocean-color);
+    cursor: pointer;
+}
+
+/*second section*/
+
+.secondsection {
+    padding: 120px 0;
+}
+
+.visually-hidden {
+    position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  outline-offset: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.qualitieslist {
+    display: flex;
+    gap: 24px;
+}
+
+.qualitiesicons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: var(--cloud-color);
+    border: 4px;
+    margin-bottom: 8px;
+}
+
+.qualities {
+    width: calc((100% - 3 * 24px) / 4);
+}
+
+.calitati {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navyblue-color);
+    margin-bottom: 8px;
+}
+
+.paragrafcalitati {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate-color);
+}
+
+/*third section*/
+
+.thirdsection {
+    padding-bottom: 120px;
+}
+
+.thirdsectiontitle {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--navyblue-color);
+    margin-bottom: 72px;
+}
+
+.thirdsectionlist {
+    display: flex;
+    gap: 24px;
+}
+
+.listelements {
+    width: calc((100% - 48px) / 3);
+}
+
+/*fourth section*/
+
+.fourthsection {
+    background-color: var(--cloud-color);
+    padding: 120px 0;
+}
+
+.fourthsectiontitle {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--navyblue-color);
+    margin-bottom: 72px;
+}
+
+.ourteamlist {
+    display: flex;
+    gap: 24px;
+}
+
+/*aici este un list. instructiunile sugereaza sa aplici valorile din prima sectiune. sunt sanse sa fie nevoie sa le reevaluezi mai tarziu. AI grija, daca va fi cazul*/
+
+.nume {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navyblue-color);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.ciudat {
+    background-color: var(--white-color);
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.employeedetails {
+    padding: 32px 0;
+}
+
+.paragrafnume {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate-color);
+    text-align: center;
+}
+
+.indexsocialnetwork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 24px;
+}
+
+.socialmedia {
+    width: 40px;
+    height: 40px;
+}
+
+.indexmedia {
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.indexmedia:hover, .indexmedia:focus {
+    background-color: var(--ocean-color);
+}
+
+.cancer {
+    fill: var(--cloud-color);
+}
+/*fifth section*/
+
+.fifthsection {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.fifthsectioncustomers {
+    font-size: 36px;
+    line-height: 1.11;
+    color: var(--navyblue-color);
+    margin-bottom: 72px;
+    text-align: center;
+}
+
+.newcustomers {
+    display: flex;
+    gap: 24px;
+}
+
+.company {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+}
+/*height vine fie la company fie la newcustomers!!!*/
+.companysymbol {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--lightslate-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lightslate-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.companysymbol:hover, .companysymbol:focus {
+    border-color: var(--ocean-color);
+    color: var(--ocean-color);
+}
+
+.companysvg {
+    fill: currentColor;
+}
+
+/*footer*/
+
+.footerindex {
+    background-color: var(--navyblue-color);
+    padding: 100px 0;
+}
+
+.logofooterspan {
+    color: var(--cloud-color);
+}
+
+.footerparagraph {
+    line-height: 1.5;
+    color: var(--cloud-color);
+    letter-spacing: 0.02em;
+    max-width: 264px;
+}
+
+.logoindexfooter {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris-color);
+    margin-right: 76px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.socialmediaclasses {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    margin-bottom: 16px;
+
+}
+
+.socialclasses {
+    /*am pus aici, initial, displayflex, dar l-am scos, ca textul de sub logo sa nu mai fie in linie cu el*/
+    align-items: center;
+    gap: 24px;
+    margin-right: 120px;
+}
+
+.footersocialmedia {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+
+}
+
+.footersocialmedialist {
+    width: 40px;
+    height: 40px;
+}
+
+.footersocialmediasvg {
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footersocialmediasvg:hover, .footersocialmediasvg:focus {
+    background-color: var(--green-color);
+}
+
+.indexfootersocialmediasvg {
+    fill: var(--cloud-color);
+}
+
+/*PORTFOLIO*/
+/*header*/
+
+.portfolioheader {
+    border-bottom: 1px solid var(--cornflower-color);
+}
+
+.portfolioheaderdiv {
+    display: flex;
+}
+
+/* fie lui container, fie lui portfolioheaderdiv*/
+
+.portfolioheadernav {
+    display: flex;
+    align-items: center;
+    margin-left: -40px;
+}
+
+.logoportfolio {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris-color);
+    margin-right: 36px; /*schimbari la margini facute de mine, nu mai reuseam sa ajustez cum trebuie*/
+    margin-left: 40px;
+}
+
+.logoportfoliolink {
+    text-decoration: none;
+}
+
+.studioportfolio {
+    color: var(--navyblue-color);
+}
+/*aici putea fi simplu list. ai grija sa adaugi aici corect, am pus o lista distincta pentru pagina portfolio*/
+.portfoliolist {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.portfolionavigationlinks {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--navyblue-color);
+    padding: 24px 0;
+}
+
+.linkforportfolio {
+    text-decoration: none;
+}
+
+.portfolionavigationlinks:hover, .portfolionavigationlinks:focus {
+    color: var(--ocean-color);
+}
+
+.portfolioaddress {
+    font-style: normal;
+    display: flex;
+    align-items: center;
+}
+
+.portfolioaddressflex {
+    display: flex;
+    gap: 40px;
+    margin-left: 200px
+}
+
+.portfoliomail {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate-color);
+}
+
+.portfoliomail:hover, .portfoliomail:focus {
+    color: var(--ocean-color);
+}
+
+.portfolioaddress .portfoliomail {
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/*portfolio main section*/
+/*si aici este un list implicit, care preia din index elemente de liststyle none*/
+
+.portfoliomainsection {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.buttonlist{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+}
+
+.buttonlist .portfoliobutton {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0, 0.2, 1);
+}
+
+.portfoliobutton {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--iris-color);
+    background-color: var(--cloud-color);
+    padding: 12px 24px;
+    border: 1px solid var(--cornflower-color);
+    border-radius: 4px;
+}
+
+.mainserviceslist:hover .portfolioservicesparagraph {
+    transform: translateY(0%);
+}
+
+.mainserviceslist:focus .portfolioservicesparagraph {
+    transform: translateY(0%);
+}
+
+.mainserviceslist .portfolioservicesparagraph {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0, 0.2, 1);
+}
+
+.portfoliobutton:hover, .portfoliobutton:focus {
+    border: 1px solid transparent;
+    color: var(--white-color);
+    background-color: var(--ocean-color);
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
+}
+/*din nou, aici ar putea fi doar link, dar vreau sa fac individual, pt fiecare pagina*/
+.portfolioserviceslink {
+    text-decoration: none;
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0, 0.2, 1);
+}
+
+.portfolioserviceslink:hover, .portfolioserviceslink:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.mainserviceslist {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.divimagine {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ATENTIE */
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block; /* Ensures that the container only takes as much width as necessary */
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below the image */
+}
+
+.paragraf-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    background-color: var(--iris-color);
+}
+
+.responsive-image:hover + .paragraf-container,
+.paragraf-container:hover {
+    opacity: 1;
+}
+
+.paragraf-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--cloud-color);
+    padding: 40px 32px 164px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    width: 296px;
+}
+
+/* ATENTIE */
+
+
+.nineservices {
+    width: calc((100% - 48px) / 3);
+}
+
+.portfolionineservicesdiv {
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower-color);
+    border-top: none;
+}
+
+.portfolioservices {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navyblue-color);
+    margin-bottom: 8px;
+}
+
+.portfolioservicesparagraph {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate-color);
+
+}
+
+/*footer*/
+
+.portfolioubuntu {
+    padding-left: 45px;
+    display: flex;
+    align-items: baseline;
+}
+
+.portfoliosocialclasses {
+    align-items: center;
+    gap: 24px;
+    margin-right: 120px;
+}
+
+.portfoliosocialmediaclasses {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    margin-bottom: 16px;
+}
+
+.portfoliofootersocialmedia {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+}
+
+.portfoliofootersocialmedialist {
+    width: 40px;
+    height: 40px;
+}
+
+.portfoliofootersocialmediasvg {
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svgportfoliofootersocialmediasvg {
+    fill: var(--cloud-color);
+}
+
+.portfoliofootersocialmediasvg:hover, .portfoliofootersocialmediasvg:focus {
+    background-color: var(--green-color);
+}
+
+.portfoliofooter {
+    background-color: var(--navyblue-color);
+    padding: 100px 0;
+}
+
+.portfoliofooterspan {
+    color: var(--cloud-color);
+}
+
+.portfoliofooterparagraph {
+    line-height: 1.5;
+    color: var(--cloud-color);
+    letter-spacing: 0.02em;
+    max-width: 264px;
+}
+
+/* pentru tema 3: 1. Este creată o clasă auxiliară generică .container 
+pentru a centra și limita conținutul în lățime.
+2. Lățimea "containerului" corespunde layout-ului și este egală cu 1200px.
+"Containerul" cuprinde conținutul antetului, al subsolului și al secțiunilor. 
+Adică se află în interiorul lor.
+3. Pentru toate secțiunile este utilizată o clasă .section, 
+umpluturile de sus și de jos sunt setate cu 94px, împingând 
+conținutul în interiorul secțiunii. */
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.ubuntu {
+    padding-left: 45px;
+    display: flex;
+    align-items: baseline;
+}
+
+/*pus de la mine din burta ca sa aliniez paragraful cu ferestrele angajatilor*/
+
+/*modal window*/
+
+.modalheader {
+    border-bottom: 1px solid var(--cornflower-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
+}
+
+.modalheaderdiv {
+    display: flex;
+}
+
+.modalcontainer {
+    width: 1158px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.modalnavigation {
+    display: flex;
+    align-items: center;
+}
+
+.logomodal {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris-color);
+    margin-right: 76px;
+}
+
+.modallogolink {
+    text-decoration: none;
+}
+
+.modalstudioindex {
+    color: var(--navyblue-color);
+}
+
+.modalnavigationmenu {
+    display: flex;
+    gap: 40px;
+    margin-left: -40px;
+}
+
+.modalnavigationlinks {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--navyblue-color);
+    padding: 24px 0;
+}
+
+.modalindexaddress {
+    font-style: normal;
+}
+
+.modalindexaddressflex {
+    display: flex;
+    gap: 40px;
+    margin-left: 200px;
+}
+
+.modalmail {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate-color);
+}
+
+.modalfirstsection {
+    background-color: var(--navyblue-color);
+    padding: 188px 0; /*poate se confrunta cu .section, unde ai 94 si 94. in caz ca da, sterge!*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/heroimage.jpg);
+}
+
+.modalfirstsectiontitle {
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    max-width: 496px;
+    margin: auto;
+    /*pusa de la mine din burta, poate fi margin: auto;*/
+}
+
+.modalfirstbutton {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    background-color: var(--iris-color);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 48px;
+    /*pusa de la mine din burta, poate fi margin: auto;*/
+    /*pusa de la mine din burta, poate fi margin-top: 48px;*/
+}
+
+.modalfirstbutton:hover, .modalfirstbutton:focus {
+    background-color: var(--ocean-color);
+    cursor: pointer;
+}
+
+/* tema 5 header portfolio*/
+
+.portfoliolist .portfolionavigationlinks {
+    display: inline-block;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfoliolist .portfolionavigationlinks::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%; /* Modificare a width in loc de height */
+    height: 4px;
+    background-color: var(--ocean-color);
+    border-radius: 2px;
+    transform: scaleX(0); /* Adaugat manual, poate nu merge */
+    transform-origin: bottom right; /* Adaugat manual, poate nu merge */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfoliolist .portfolionavigationlinks:hover::after {
+    transform: scaleX(1); /* Adaugat de mine, poate nu merge */
+}
+
+
+/* dupa instructiunile de pe site */
+
+.footermodalwindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    /*transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.is-hidden {
+    visibility: hidden;
+}
+
+
+.footermodalwindow:not(.is-hidden) {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.modalmodal {
+    background-color: var(--dairy-color);
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0, 0.2);
+}
+
+.modalbutton {
+    color: #2e2f42;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cornflower-color);
+    margin: 1px solid rgba(0, 0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-colour 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ .modalbutton:hover .modalbutton:focus {
+    background-color: var(--ocean-color);
+    border: none;
+    fill: var(--white-color);
+}
+
+.modalbutton .modalbuttonsvg {
+    transition: fill var(--white-color) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
