@@ -1242,21 +1242,9 @@ margin-right: -16px;
     color: var(--iris-color);
 }
 
-.buttonclasscancer {
-    /*display: inline-flex;
-    padding: 16px 32px;
-    align-items: flex-start;
-    gap: 10px;
-    margin-left: 66px;*/
-    display: block;
-    margin:  5px 100px;
-    min-width: 169px;
-    height: 56px;
-
-
-}
-
 .evenmorecancer {
+    display: block;
+    margin-left: 100px;
     min-width: 169px;
     height: 56px;
     font-family: "Roboto", sans-serif;
