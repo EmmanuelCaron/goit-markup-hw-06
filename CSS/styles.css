@@ -1217,11 +1217,11 @@ margin-right: -16px;
 }
 
 .checkboxspancancer {
-   width: 16; 
+   width: 16px; 
    height: 16px;
    border: 1px solid rgba(46, 47, 66, 0.4);
    border-radius: 2px;
-   transition: background-colour 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-colour 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    display: inline-flex;
    align-items: center;
    justify-content: center;
@@ -1242,8 +1242,21 @@ margin-right: -16px;
     color: var(--iris-color);
 }
 
-.evenmorecancer {
+.buttonclasscancer {
+    /*display: inline-flex;
+    padding: 16px 32px;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 66px;*/
     display: block;
+    margin:  5px 100px;
+    min-width: 169px;
+    height: 56px;
+
+
+}
+
+.evenmorecancer {
     min-width: 169px;
     height: 56px;
     font-family: "Roboto", sans-serif;
@@ -1257,6 +1270,13 @@ margin-right: -16px;
     border: none;
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: center;
+    font-style: normal;
+    text-align: center;
+}
+
+.checkboxlinkcancer {
+    color: var(--iris-color);
 }
 
 /* tema 6 portfolio header, nu uita ca sunt clase diferite pentru fiecare fereastra*/
